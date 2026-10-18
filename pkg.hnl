@@ -1,3 +1,3 @@
 -- lib-serve-epoll: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ deps: { "concurrent-epoll": "branch:main", http_rfc: "branch:main", "tls-libssl": "branch:main", ws_frame: "branch:main", "ws_frame-handl": "branch:main", "ws-whatwg-c": "branch:main" }, modules: ["serve-epoll"] }
+{ deps: { serve: "branch:main", "concurrent-epoll": "branch:main", http_rfc: "branch:main", "tls-libssl": "branch:main", ws_frame: "branch:main", "ws_frame-handl": "branch:main", "ws-whatwg-c": "branch:main" }, modules: ["serve-epoll"] }
