@@ -1,0 +1,11 @@
+[dependencies]
+serve = { path = "../lib-serve/src" }
+concurrent-epoll = { path = "../lib-concurrent-epoll/src" }
+http_rfc = { path = "../lib-http_rfc/src" }
+tls-libssl = { path = "../lib-tls-libssl/src" }
+ws_frame = { path = "../lib-ws_frame/src" }
+ws_frame-handl = { path = "../lib-ws_frame-handl/src" }
+ws-whatwg-c = { path = "../lib-ws-whatwg-c/src" }
+
+# own package
+serve-epoll = { path = "src" }
