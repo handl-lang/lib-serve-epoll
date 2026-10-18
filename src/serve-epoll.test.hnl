@@ -1,13 +1,13 @@
 --- serve-epoll tests: the Handl HTTP server and the libcurl async
 --- client run as tasks in the same concurrent-epoll scheduler.
 
-from "../concurrent-epoll/concurrent-epoll" import { run, tcp_listen }
-from "../serve-epoll/serve-epoll" import { listener_task, tls_ctx_server }
-from "../fetch-c/fetch-c" import { fetch_task }
-from "../http_rfc/http_rfc" import * as rfc
-from "../ws-c/ws-c" import { prepare, active_socket, close }
+from "concurrent-epoll" import { run, tcp_listen }
+from "serve-epoll" import { listener_task, tls_ctx_server }
+from "fetch-c" import { fetch_task }
+from "http_rfc" import * as rfc
+from "ws-c" import { prepare, active_socket, close }
 from "bytes" import * as bytes
-from "../generated/libc-c-linux-x86_64/stdlib" import { system }
+from "libc/stdlib" import { system }
 
 CURLWS_TEXT := 1
 

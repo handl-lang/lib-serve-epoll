@@ -12,12 +12,12 @@
 ---   serve_task(handler, opts) step-arrow handler, invoked via `enter`
 ---                             so it may suspend on scheduler ops
 ---
-from "../concurrent-epoll/concurrent-epoll" import { run, tcp_listen }
-from "../http_rfc/http_rfc" import * as rfcm
-from "../tls-libssl/tls-libssl" import * as tlsp
-from "../ws_frame" import { OpText, OpBinary, OpClose, OpPing, OpPong }
-from "../ws_frame-handl/frame" import { encode, decode }
-from "../ws-whatwg-c/http" import { accept_key }
+from "concurrent-epoll" import { run, tcp_listen }
+from "http_rfc" import * as rfcm
+from "tls-libssl" import * as tlsp
+from "ws_frame" import { OpText, OpBinary, OpClose, OpPing, OpPong }
+from "ws_frame-handl/frame" import { encode, decode }
+from "ws-whatwg-c/http" import { accept_key }
 from "bytes" import * as bytes
 from "str" import * as str
 
