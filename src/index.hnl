@@ -120,13 +120,13 @@ ws_conn_task := (s) ~> match s.phase {
   },
   "frames": do {
     d := decode(s.buf)
-    if tag.tag_of(d) == "None" {
-      -- incomplete frame: read more
-      { call: read_call(s), state: hash_map.merge(s, { phase: "got" }) }
-    } else {
-      do {
-        f := d.value.frame
-        rest := d.value.rest
+    -- ctor-sym dispatch on the option result (phase-3 WS-F): `Some(v)`
+    -- carries the decoded frame + unconsumed rest; `none()` (incomplete
+    -- frame) reads more bytes.
+    match d {
+      Some(v): do {
+        f := v.frame
+        rest := v.rest
         if f.op == OpClose {
           { call: send_call(s, ws_ctrl_frame(OpClose, bytes.from_list([]))),
             state: hash_map.merge(s, { phase: "closing" }) }
@@ -150,7 +150,9 @@ ws_conn_task := (s) ~> match s.phase {
             }
           }
         }
-      }
+      },
+      -- `none()`: incomplete frame — read more
+      _: { call: read_call(s), state: hash_map.merge(s, { phase: "got" }) }
     }
   },
   "sent": do {
