@@ -10,7 +10,7 @@ WebSocket upgrade per connection task. Pure `.hnl`.
 | `src/index.hnl` | the implementation |
 | `src/serve-epoll.test.hnl` | the .hnl test suite |
 | `pkg.hnl` | manifest — `modules: ["serve-epoll"]`, deps `serve`, `concurrent-epoll`, `http_rfc`, `tls-libssl`, `ws_frame`, `ws_frame-handl`, `ws-whatwg-c` |
-| `scripts/hnl-gate.sh`, `ci.sh` | the gate / bupha entry |
+| `scripts/hnl-gate.sh`, `workflows/gate.yaml` | the gate / bupha entry |
 
 ## Contract
 
