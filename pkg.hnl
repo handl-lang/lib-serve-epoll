@@ -1,3 +1,3 @@
 -- lib-serve-epoll: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ deps: { serve: "branch:main", "concurrent-epoll": "branch:main", http_rfc: "branch:main", "tls-libssl": "branch:main", ws_frame: "branch:main", "ws_frame-handl": "branch:main", "ws-whatwg-c": "branch:main" }, modules: ["serve-epoll"], description: "serve wired to concurrent-epoll: accept loop, TLS, HTTP codec, WebSocket upgrade.", license: "MIT" }
+{ deps: { serve: "branch:main", "concurrent-epoll": "branch:main", http_rfc: "branch:main", "tls-libssl": "branch:main", ws_frame: "branch:main", "ws_frame-handl": "branch:main", "ws-whatwg-c": "branch:main" }, modules: ["serve-epoll"], name: "serve-epoll", description: "serve wired to concurrent-epoll: accept loop, TLS, HTTP codec, WebSocket upgrade.", license: "MIT" }
