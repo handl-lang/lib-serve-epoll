@@ -1,11 +1,18 @@
 [dependencies]
 serve = { path = "../lib-serve/src" }
 concurrent-epoll = { path = "../lib-concurrent-epoll/src" }
-http_rfc = { path = "../lib-http_rfc/src" }
+concurrent = { path = "../lib-concurrent/src" }
+http_rfc = { path = "../lib-http-rfc/src" }
 tls-libssl = { path = "../lib-tls-libssl/src" }
-ws_frame = { path = "../lib-ws_frame/src" }
-ws_frame-handl = { path = "../lib-ws_frame-handl/src" }
+tls = { path = "../lib-tls/src" }
+ws_frame = { path = "../lib-ws-frame/src" }
+ws_frame-handl = { path = "../lib-ws-frame-handl/src" }
 ws-whatwg-c = { path = "../lib-ws-whatwg-c/src" }
+ws-c = { path = "../lib-ws-c/src" }
+ws = { path = "../lib-ws/src" }
+fetch-c = { path = "../lib-fetch-c/src" }
+libc = { path = "../lib-libc/handl-packages/generated/libc/libc-c-linux-x86_64" }
+curl = { path = "../lib-curl/handl-packages/generated/curl/curl-c-linux-x86_64" }
 
 # own package
 serve-epoll = { path = "src" }
